@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redirigir a la URL de WhatsApp
         window.open(whatsappURL, '_blank');
         
-        // Opcional: Resetea el formulario después de enviar el mensaje
+        // Resetea el formulario después de enviar el mensaje
         form.reset();
     });
 });
