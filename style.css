@@ -1,10 +1,10 @@
 /* Variables para los colores */
 :root {
-    --primary-color: #1E90FF; /* Azul en lugar de verde */
+    --primary-color: #1E90FF; /* Azul */
     --secondary-color: #333;
     --text-color: #ffffff;
     --background-color: #f0f0f0;
-    --hover-color: #1C86EE; /* Azul más oscuro para hover */
+    --hover-color: #1C86EE;
 }
 
 /* Configuración base */
@@ -16,49 +16,37 @@ body {
     color: var(--secondary-color);
 }
 
-header {
-    background-color: var(--primary-color);
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Estilo para el título (h1) */
+h1 {
+    font-size: 3rem; /* Aumenta el tamaño del título */
     font-weight: 600;
+    margin: 20px 0;
 }
 
-section {
-    padding: 40px;
-    text-align: center;
+/* Estilo para el subtítulo (h2) */
+h2 {
+    font-size: 1.5rem; /* Tamaño del subtítulo */
+    font-weight: 400;
+    color: #555;
+    margin-top: 10px;
 }
 
 #gallery .image-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 #gallery .image-grid img {
-    max-width: 30%;
-    margin-bottom: 20px;
+    width: 30%;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #gallery .image-grid img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 form {
@@ -102,24 +90,17 @@ footer {
     text-align: center;
 }
 
-footer i {
-    color: white;
-    margin-left: 10px;
-}
-
-/* Mensaje de éxito oculto */
 .hidden {
     display: none;
 }
 
 /* Estilos responsivos para móviles */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    .image-grid img {
+        width: 100%;
     }
 
-    #gallery .image-grid img {
-        max-width: 90%;
+    section {
+        padding: 20px;
     }
 }

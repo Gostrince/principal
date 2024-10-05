@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const successMessage = document.getElementById('success-message');
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evita que el formulario se envíe
-        successMessage.classList.remove('hidden'); // Muestra el mensaje de éxito
-        form.reset(); // Resetea el formulario
+        event.preventDefault();
+        successMessage.classList.remove('hidden');
+        form.reset();
     });
 });
