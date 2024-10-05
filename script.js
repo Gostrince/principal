@@ -6,11 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Obtener los valores del formulario
         const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
         // Crear el mensaje para WhatsApp
-        const whatsappMessage = `Hola, mi nombre es ${name}. Mi correo es ${email}. Quisiera saber lo siguiente: ${message}.`;
+        const whatsappMessage = `Hola, mi nombre es ${name}. Quisiera saber lo siguiente: ${message}.`;
         
         // Reemplaza con tu número de WhatsApp (en formato internacional, sin signos + o -)
         const whatsappNumber = "56953077043";
