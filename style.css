@@ -1,10 +1,10 @@
 /* Variables para los colores */
 :root {
-    --primary-color: #4CAF50; /* Verde saludable */
+    --primary-color: #1e69cc; /* Verde saludable */
     --secondary-color: #333;
     --text-color: #ffffff;
     --background-color: #f0f0f0;
-    --hover-color: #45a049; /* Verde oscuro para efectos hover */
+    --hover-color: #0e70f2; /* Verde oscuro para efectos hover */
 }
 
 /* Configuración base */
