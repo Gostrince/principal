@@ -1,10 +1,10 @@
 /* Variables para los colores */
 :root {
-    --primary-color: #1E90FF; /* Azul */
+    --primary-color: #4CAF50; /* Verde saludable */
     --secondary-color: #333;
     --text-color: #ffffff;
     --background-color: #f0f0f0;
-    --hover-color: #1C86EE;
+    --hover-color: #45a049; /* Verde oscuro para efectos hover */
 }
 
 /* Configuración base */
@@ -16,39 +16,87 @@ body {
     color: var(--secondary-color);
 }
 
-/* Estilo para el título (h1) */
+header {
+    background-color: var(--primary-color);
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
 h1 {
-    font-size: 3rem; /* Aumenta el tamaño del título */
+    font-size: 3.5rem;
     font-weight: 600;
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
 
-/* Estilo para el subtítulo (h2) */
 h2 {
-    font-size: 1.5rem; /* Tamaño del subtítulo */
+    font-size: 1.8rem;
     font-weight: 400;
-    color: #555;
-    margin-top: 10px;
+    color: #eaeaea;
 }
 
-#gallery .image-grid {
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Estilos para la sección de beneficios */
+.benefits-grid {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
-#gallery .image-grid img {
+.benefit {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit h3 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+.benefit p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo de la galería */
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-grid img {
     width: 30%;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#gallery .image-grid img:hover {
+.image-grid img:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo del formulario de contacto */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -83,6 +131,7 @@ button:hover {
     background-color: var(--hover-color);
 }
 
+/* Pie de página */
 footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -90,13 +139,19 @@ footer {
     text-align: center;
 }
 
+footer i {
+    color: white;
+    margin-left: 10px;
+}
+
+/* Mensaje de éxito oculto */
 .hidden {
     display: none;
 }
 
 /* Estilos responsivos para móviles */
 @media (max-width: 768px) {
-    .image-grid img {
+    .benefit, .image-grid img {
         width: 100%;
     }
 
