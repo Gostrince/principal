@@ -1,12 +1,23 @@
+/* Variables para los colores */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #333;
+    --text-color: #ffffff;
+    --background-color: #f0f0f0;
+    --hover-color: #45a049;
+}
+
+/* Configuración base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    color: var(--secondary-color);
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     padding: 20px;
     text-align: center;
     color: white;
@@ -25,18 +36,90 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 600;
 }
 
-main {
-    padding: 20px;
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#gallery .image-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#gallery .image-grid img {
+    max-width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#gallery .image-grid img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+footer i {
+    color: white;
+    margin-left: 10px;
+}
+
+/* Mensaje de éxito oculto */
+.hidden {
+    display: none;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #gallery .image-grid img {
+        max-width: 90%;
+    }
 }

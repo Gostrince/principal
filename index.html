@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonstrince</title>
-    <link rel="stylesheet" href="style.css"> <!-- Conectar CSS -->
+    <title>Mi Página Mejorada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+
+    <!-- Header con menú de navegación -->
     <header>
-        <h1>Bienvenidos a Gonstrince</h1>
+        <h1>Bienvenidos a Mi Página Mejorada</h1>
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Galería</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Sección de contenido</h2>
-            <p>Este es un párrafo de ejemplo en mi página web. ¡Puedes agregar lo que quieras aquí!</p>
-        </section>
-    </main>
+    <!-- Galería de imágenes -->
+    <section id="gallery">
+        <h2>Galería de Imágenes</h2>
+        <div class="image-grid">
+            <img src="https://via.placeholder.com/300" alt="Descripción de imagen 1">
+            <img src="https://via.placeholder.com/300" alt="Descripción de imagen 2">
+            <img src="https://via.placeholder.com/300" alt="Descripción de imagen 3">
+        </div>
+    </section>
 
+    <!-- Sección de contacto con formulario -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="success-message" class="hidden">¡Gracias por tu mensaje! Te contactaremos pronto.</p>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
         <p>Copyright © 2024 Mi Nombre</p>
+        <p>Sígueme en redes sociales:
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </p>
     </footer>
 
-    <script src="script.js"></script> <!-- Conectar JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
