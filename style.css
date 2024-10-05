@@ -24,15 +24,15 @@ header {
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 3.0rem;
+    font-weight: 550;
     margin-bottom: 10px;
 }
 
 h2 {
     font-size: 1.8rem;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
 }
 
 section {
