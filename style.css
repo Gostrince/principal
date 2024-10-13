@@ -68,6 +68,15 @@ header {
     margin-top: 50px;
 }
 
+/* Sección de contacto centrada */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 /* Contenedor para los botones sociales */
 .social-buttons {
     display: flex;
