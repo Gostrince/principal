@@ -79,12 +79,12 @@ header {
 .whatsapp-btn, .instagram-btn {
     display: inline-block;
     color: white;
-    font-size: 5rem;
-    padding: 20px;
+    font-size: 5rem; /* Ajusta el tamaño del ícono */
+    padding: 25px; /* Aumenta el padding */
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* WhatsApp */
@@ -95,16 +95,17 @@ header {
 .whatsapp-btn:hover {
     background-color: #20b558;
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(32, 181, 88, 0.5); /* Efecto de sombra en hover */
 }
 
 /* Instagram */
 .instagram-btn {
-    background-color: #E1306C;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .instagram-btn:hover {
-    background-color: #C13584;
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(204, 35, 102, 0.5); /* Efecto de sombra en hover */
 }
 
 /* Responsivo para móviles */
