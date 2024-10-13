@@ -1,10 +1,10 @@
-/* Variables para los colores */
+/* Variables para colores */
 :root {
-    --primary-color: #1e69cc; /* Verde saludable */
+    --primary-color: #1e69cc;
     --secondary-color: #333;
     --text-color: #ffffff;
     --background-color: #f0f0f0;
-    --hover-color: #0e70f2; /* Verde oscuro para efectos hover */
+    --hover-color: #0e70f2;
 }
 
 /* Configuración base */
@@ -16,31 +16,36 @@ body {
     color: var(--secondary-color);
 }
 
+/* Encabezado con imagen de fondo */
 header {
-    background-color: var(--primary-color);
-    padding: 40px;
+    position: relative;
+    background-image: url('imagenes/encabezado.jpg'); /* Cambia a la imagen deseada */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    padding: 80px 20px; /* Ajusta el espacio dentro del encabezado */
     text-align: center;
     color: white;
 }
 
-h1 {
-    font-size: 3.0rem;
-    font-weight: 550;
-    margin-bottom: 10px;
+/* Superposición oscura para mayor legibilidad */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1;
 }
 
-h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #ffffff;
+header h1, header h2 {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté sobre la superposición */
 }
 
-section {
-    padding: 40px;
-    text-align: center;
-}
-
-/* Estilos para la sección de beneficios */
+/* Sección de beneficios */
 .benefits-grid {
     display: flex;
     justify-content: space-between;
@@ -77,26 +82,7 @@ section {
     color: #555;
 }
 
-/* Estilo de la galería */
-.image-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.image-grid img {
-    width: 30%;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo del formulario de contacto */
+/* Formulario de contacto */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -144,18 +130,9 @@ footer i {
     margin-left: 10px;
 }
 
-/* Mensaje de éxito oculto */
-.hidden {
-    display: none;
-}
-
-/* Estilos responsivos para móviles */
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    .benefit, .image-grid img {
+    .benefit {
         width: 100%;
-    }
-
-    section {
-        padding: 20px;
     }
 }
