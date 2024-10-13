@@ -20,14 +20,15 @@ body {
 header {
     position: relative;
     background-image: url('imagenes/encabezado.jpg'); /* Cambia a la imagen deseada */
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
-    padding: 80px 20px;
+    padding: 80px 20px; /* Ajusta el espacio dentro del encabezado */
     text-align: center;
     color: white;
 }
 
+/* Superposición oscura para mayor legibilidad */
 header::before {
     content: "";
     position: absolute;
@@ -41,39 +42,7 @@ header::before {
 
 header h1, header h2 {
     position: relative;
-    z-index: 2;
-}
-
-/* Ajustes de fuente en escritorio */
-h1 {
-    font-size: 3rem; /* Tamaño grande en escritorio */
-    font-weight: 550;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 0;
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Tamaño más pequeño en móviles */
-    }
-
-    h2 {
-        font-size: 1.2rem; /* Ajuste de subtítulo en móviles */
-    }
-
-    header {
-        padding: 40px 10px; /* Reducir padding en móviles */
-    }
-
-    .benefit {
-        width: 100%; /* Los beneficios ocupan todo el ancho en móviles */
-    }
+    z-index: 2; /* Asegura que el texto esté sobre la superposición */
 }
 
 /* Sección de beneficios */
@@ -159,4 +128,11 @@ footer {
 footer i {
     color: white;
     margin-left: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .benefit {
+        width: 100%;
+    }
 }
