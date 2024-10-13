@@ -1,4 +1,4 @@
-/* Variables para colores */
+/* Variables de colores */
 :root {
     --primary-color: #1e69cc;
     --secondary-color: #333;
@@ -19,16 +19,15 @@ body {
 /* Encabezado con imagen de fondo */
 header {
     position: relative;
-    background-image: url('imagenes/encabezado.jpg'); /* Cambia a la imagen deseada */
-    background-size: cover; /* La imagen cubre todo el contenedor */
-    background-position: center; /* Centra la imagen */
+    background-image: url('imagenes/encabezado.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 80px 20px; /* Ajusta el espacio dentro del encabezado */
+    padding: 80px 20px;
     text-align: center;
     color: white;
 }
 
-/* Superposición oscura para mayor legibilidad */
 header::before {
     content: "";
     position: absolute;
@@ -36,21 +35,34 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 header h1, header h2 {
     position: relative;
-    z-index: 2; /* Asegura que el texto esté sobre la superposición */
+    z-index: 2;
 }
 
-/* Sección de beneficios */
+h1 {
+    font-size: 3rem;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Estilos de beneficios usando CSS Grid */
 .benefits-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .benefit {
@@ -58,12 +70,16 @@ header h1, header h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .benefit img {
     max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -132,7 +148,19 @@ footer i {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    .benefit {
-        width: 100%;
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 40px 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
 }
