@@ -59,7 +59,7 @@ header {
     border-radius: 10px;
 }
 
-/* Estilos para la sección de contacto */
+/* Sección de contacto centrada */
 #contact {
     display: flex;
     flex-direction: column;
@@ -68,29 +68,49 @@ header {
     margin-top: 50px;
 }
 
-/* Ícono de WhatsApp centrado y más grande */
-.whatsapp-btn {
+/* Contenedor para los botones sociales */
+.social-buttons {
+    display: flex;
+    gap: 30px; /* Espacio entre los íconos */
+    margin-top: 20px;
+}
+
+/* Estilos comunes para los íconos */
+.whatsapp-btn, .instagram-btn {
     display: inline-block;
-    background-color: #25D366;
     color: white;
-    font-size: 5rem; /* Aumenta el tamaño del ícono */
+    font-size: 5rem;
     padding: 20px;
     border-radius: 50%;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    margin-top: 20px;
     text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+    background-color: #25D366;
 }
 
 .whatsapp-btn:hover {
     background-color: #20b558;
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+    transform: scale(1.1);
 }
 
-/* Ajustes responsivos para móviles */
+/* Instagram */
+.instagram-btn {
+    background-color: #E1306C;
+}
+
+.instagram-btn:hover {
+    background-color: #C13584;
+    transform: scale(1.1);
+}
+
+/* Responsivo para móviles */
 @media (max-width: 768px) {
-    .whatsapp-btn {
-        font-size: 4rem; /* Tamaño reducido en móviles */
+    .whatsapp-btn, .instagram-btn {
+        font-size: 4rem;
         padding: 15px;
     }
 }
