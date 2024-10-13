@@ -3,7 +3,7 @@
     --primary-color: #1e69cc;
     --secondary-color: #333;
     --text-color: #ffffff;
-    --background-color: #989898;
+    --background-color: #f0f0f0;
     --hover-color: #0e70f2;
 }
 
@@ -155,7 +155,7 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 10px;
-    margin-top: 30px; /* Aumenta el espacio entre los íconos y el pie de página */
+    margin-top: 20px; /* Aumenta el espacio entre los íconos y el pie de página */
 }
 
 /* Responsivo para móviles */
