@@ -59,22 +59,40 @@ header {
     border-radius: 10px;
 }
 
-/* Ícono de WhatsApp */
+/* Estilos para la sección de contacto */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Ícono de WhatsApp centrado y más grande */
 .whatsapp-btn {
     display: inline-block;
     background-color: #25D366;
     color: white;
-    font-size: 3rem;
-    padding: 15px;
+    font-size: 5rem; /* Aumenta el tamaño del ícono */
+    padding: 20px;
     border-radius: 50%;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     margin-top: 20px;
     text-decoration: none;
 }
 
 .whatsapp-btn:hover {
     background-color: #20b558;
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+}
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        font-size: 4rem; /* Tamaño reducido en móviles */
+        padding: 15px;
+    }
 }
 
 /* Pie de página */
