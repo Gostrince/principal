@@ -106,6 +106,7 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 80px; /* Aumenta el espacio debajo de los íconos */
 }
 
 /* Contenedor para los botones sociales */
@@ -119,8 +120,8 @@ h2 {
 .whatsapp-btn, .instagram-btn {
     display: inline-block;
     color: white;
-    font-size: 5rem; /* Ajusta el tamaño del ícono */
-    padding: 25px; /* Aumenta el padding */
+    font-size: 5rem;
+    padding: 25px;
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
@@ -135,7 +136,7 @@ h2 {
 .whatsapp-btn:hover {
     background-color: #20b558;
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(32, 181, 88, 0.5); /* Efecto de sombra en hover */
+    box-shadow: 0 0 15px rgba(32, 181, 88, 0.5);
 }
 
 /* Instagram */
@@ -145,15 +146,7 @@ h2 {
 
 .instagram-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(204, 35, 102, 0.5); /* Efecto de sombra en hover */
-}
-
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-    .whatsapp-btn, .instagram-btn {
-        font-size: 4rem;
-        padding: 15px;
-    }
+    box-shadow: 0 0 15px rgba(204, 35, 102, 0.5);
 }
 
 /* Pie de página */
@@ -162,4 +155,13 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 10px;
+    margin-top: 40px; /* Aumenta el espacio entre los íconos y el pie de página */
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .whatsapp-btn, .instagram-btn {
+        font-size: 4rem;
+        padding: 15px;
+    }
 }
