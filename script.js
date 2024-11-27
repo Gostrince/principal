@@ -2,16 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const whatsappButton = document.querySelector('.whatsapp-btn');
 
     whatsappButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
+        event.preventDefault();
         const whatsappNumber = '56953077043';
         const whatsappURL = `https://wa.me/${whatsappNumber}`;
-
-        window.open(whatsappURL, '_blank'); // Redirigir a WhatsApp
+        window.open(whatsappURL, '_blank');
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Código del carrusel
     const images = document.querySelectorAll('.carousel img');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
@@ -36,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', prevImage);
     nextButton.addEventListener('click', nextImage);
 
-    // Cambio automático cada 5 segundos
     setInterval(nextImage, 5000);
 });
+
 
