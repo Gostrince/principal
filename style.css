@@ -27,24 +27,15 @@ body {
 /* Encabezado */
 header {
     position: relative;
-    background-image: url('imagenes/encabezado.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px 10px; /* Reducido a la mitad */
+    background-color: #87CEEB; /* Fondo celeste */
+    padding: 20px 10px; /* Mantén el padding reducido */
     text-align: center;
     color: white;
 }
 
 header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    content: ""; /* Elimina la superposición si no es necesaria */
+    display: none;
 }
 
 header h1, header h2 {
@@ -61,7 +52,6 @@ h2 {
     font-size: 1.5rem;
     font-weight: 400;
 }
-
 /* Carrusel */
 .carousel-container {
     position: relative;
