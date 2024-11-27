@@ -27,8 +27,8 @@ body {
 /* Encabezado */
 header {
     position: relative;
-    background-color: #87CEEB; /* Fondo celeste */
-    padding: 20px 10px; /* Mantén el padding reducido */
+    background-color: #4682B4; /* Celeste más intenso */
+    padding: 10px 5px; /* Mantén el padding reducido */
     text-align: center;
     color: white;
 }
