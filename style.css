@@ -28,7 +28,7 @@ body {
 header {
     position: relative;
     background-color: #4682B4; /* Celeste más intenso */
-    padding: 10px 5px; /* Mantén el padding reducido */
+    padding: 5px 5px; /* Mantén el padding reducido */
     text-align: center;
     color: white;
 }
@@ -106,7 +106,7 @@ h2 {
 /* Sección de beneficios */
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Por defecto */
     gap: 20px;
     margin: 0 auto;
     max-width: 1200px;
@@ -182,10 +182,10 @@ footer {
     margin-top: 30px;
 }
 
-/* Responsivo para móviles */
+/* Estilo responsivo para móviles */
 @media (max-width: 768px) {
-    .whatsapp-btn, .instagram-btn {
-        font-size: 4rem;
-        padding: 15px;
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas en móviles */
+        gap: 10px; /* Ajusta el espacio entre tarjetas si es necesario */
     }
 }
