@@ -78,19 +78,15 @@ h2 {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 500%; /* Ajuste para 5 imágenes */
-    height: 100%; /* Asegura que el contenedor de imágenes ocupe todo el espacio */
+    height: 100%; /* Asegura que el carrusel ocupe todo el alto del contenedor */
 }
 
 .carousel img {
-    width: auto; /* Mantiene la proporción de la imagen */
-    height: 100%; /* Ajusta la imagen a la altura del contenedor */
-    margin: auto; /* Centra las imágenes si son más pequeñas que el contenedor */
-    display: none; /* Oculta todas las imágenes por defecto */
-}
-
-.carousel img.active {
-    display: block; /* Muestra solo la imagen activa */
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+    height: 100%; /* Ajusta la imagen al alto del carrusel */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión ni recortes */
+    display: block; /* Asegura que las imágenes sean visibles */
+    background-color: #fff; /* Fondo de cada imagen */
 }
 
 .carousel-buttons {
@@ -203,4 +199,3 @@ footer {
         padding: 15px;
     }
 }
-
