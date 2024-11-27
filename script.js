@@ -10,3 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(whatsappURL, '_blank'); // Redirigir a WhatsApp
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.carousel img');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    prevButton.addEventListener('click', prevImage);
+    nextButton.addEventListener('click', nextImage);
+
+    // Cambio automático cada 5 segundos
+    setInterval(nextImage, 5000);
+});
+
