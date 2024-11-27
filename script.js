@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showImage(index) {
         images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
+            img.style.display = i === index ? 'block' : 'none'; // Solo la imagen activa se muestra
         });
     }
 
@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', prevImage);
     nextButton.addEventListener('click', nextImage);
 
+    // Inicializa el carrusel mostrando la primera imagen
+    showImage(currentIndex);
+
+    // Cambio automático cada 5 segundos
     setInterval(nextImage, 5000);
 });
 
