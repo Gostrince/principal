@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showImage(currentIndex);
 
     // Cambio automático cada 5 segundos
-    setInterval(nextImage, 5000);
+    setInterval(nextImage, 3000);
 });
 
 
